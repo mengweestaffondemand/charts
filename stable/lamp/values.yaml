@@ -221,10 +221,10 @@ phpmyadmin:
 resources:
   requests:
     ## resources.requests.cpu CPU resource requests
-    cpu: 1m
+    cpu: 100m
 
     ## resources.requests.memory Memory resource requests
-    memory: 1Mi
+    memory: 256Mi
 
   # limits:
   ## resources.limits.cpu CPU resource limits
@@ -232,13 +232,18 @@ resources:
 
   ## resources.limits.memory Memory resource limits
   #   memory: 1024Mi
+  limits:
+  ## resources.limits.cpu CPU resource limits
+    cpu: 1000m
 
+  ## resources.limits.memory Memory resource limits
+    memory: 512Mi
 
 ### STORAGE ###
 
 persistence:
   ## persistence.enabled Enables persistent volume - PV provisioner support necessary
-  enabled: true
+  enabled: false
 
   ## persistence.keep Keep persistent volume after helm delete
   keep: false
@@ -247,7 +252,7 @@ persistence:
   accessMode: ReadWriteOnce
 
   ## persistence.size PVC Size
-  size: 5Gi
+  size: 1Gi
 
   ## persistence.storageClass PVC Storage Class
   ## If defined, storageClassName: <storageClass>

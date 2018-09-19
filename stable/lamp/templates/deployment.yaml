@@ -51,7 +51,7 @@ spec:
       {{- if .Values.php.copyRoot}}
       - name: "copy-root"
         image: "{{ .Values.php.repository }}:{{ .Values.php.tag }}"
-        imagePullPolicy: "Always"
+        imagePullPolicy: "IfNotPresent"
         command: ["/bin/bash", "-c", "cp -ua /var/www/html/* /data/web/ && cp -ua /var/www/html/.[^.]* /data/web/ && chown 33:33 -R /data/web/"]
         volumeMounts:
         {{- if and .Values.php.persistentSubpaths (or .Values.persistence.hostPath .Values.persistence.enabled)}}
@@ -92,7 +92,7 @@ spec:
       {{- if .Values.init.clone.release }}
       - name: "init-clone"
         image: "lead4good/xtrabackup"
-        imagePullPolicy: "Always"
+        imagePullPolicy: "IfNotPresent"
         command: ["sh", "/init/init_clone.sh"]
         volumeMounts:
         - name: httpd-data
@@ -215,7 +215,7 @@ spec:
       {{- if not .Values.init.clone.release }}
       - name: init-wp
         image: lead4good/init-wp
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         command: ["bash", "-c", "chown -R www-data:www-data /var/www/ && su -s /bin/bash -c \"bash /init/init_wp.sh\" www-data"]
         volumeMounts:
         {{- if and .Values.php.persistentSubpaths (or .Values.persistence.hostPath .Values.persistence.enabled)}}
@@ -290,7 +290,7 @@ spec:
       {{- end }}
       - name: init-wp-db
         image: lead4good/init-wp
-        imagePullPolicy: Always
+        imagePullPolicy: IfNotPresent
         command: ["bash", "-c", "bash /init/init_wp_db.sh"]
         volumeMounts:
         {{- if or .Values.mysql.sockets .Values.php.ini }}
@@ -363,7 +363,7 @@ spec:
       {{- if .Values.php.fpmEnabled }}
       - name: "httpd"
         image: "httpd:2.4.29-alpine"
-        imagePullPolicy: "Always"
+        imagePullPolicy: "IfNotPresent"
         ports:
         - containerPort: 80
         volumeMounts:

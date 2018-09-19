@@ -10,6 +10,8 @@ metadata:
     release: {{ .Release.Name }}
 data:
   additional.ini: |
+    extension=pgsql.so
+    extension=pdo_pgsql.so
   {{- if .Values.php.ini }}
 {{ .Values.php.ini  | indent 4 }}
   {{- end }}
