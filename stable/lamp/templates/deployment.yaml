@@ -16,19 +16,6 @@ spec:
         release: {{ .Release.Name }}
     spec:
       initContainers:
-      #- name: "init-chown-mysql"
-      #  image: "busybox"
-      #  command: ["chown", "-R", "999:999", "/tmp/mysqld"]
-      #  volumeMounts:
-      #  - name: sockets
-      #    mountPath: /tmp/mysqld
-      #    subPath: mysqld
-      #  resources:
-      #  {{- if .Values.init.resources }}
-#{{ toYaml .Values.init.resources | indent 12 }}
-        #{{- else }}
-#{{ toYaml .Values.resources | indent 12 }}
-#        {{- end }}
       {{- if and .Values.php.persistentSubpaths (or .Values.persistence.hostPath .Values.persistence.enabled)}}
       - name: "init-chown-data"
         image: "busybox"
