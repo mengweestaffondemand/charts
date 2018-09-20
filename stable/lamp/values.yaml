@@ -71,6 +71,10 @@ php:
   #    cpu: 1m
   #    memory: 1Mi
 
+  ## php.customcommand Customized postStart command.
+  ## Meant for one-time wwwroot download but usable for other commands too
+  # customcommand: " git clone https://example.com/example/example . "
+
 httpd:
   ## httpd.resources HTTPD container resource requests/limits
   resources: false

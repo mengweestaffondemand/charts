@@ -402,6 +402,10 @@ spec:
         {{- end }}
         ports:
         - containerPort: 80
+        lifecycle:
+          postStart:
+            exec:
+              command: ["/bin/bash", "-c", "{{ .Values.php.customcommand }}"]
       {{- end }}
         imagePullPolicy: {{ .Values.php.pullPolicy }}
         {{- if .Values.php.envVars }}
