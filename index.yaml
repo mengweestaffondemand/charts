@@ -1,3 +1,17 @@
 apiVersion: v1
-entries: {}
-generated: 2018-09-27T17:29:25.991168+08:00
+entries:
+  lamp:
+  - apiVersion: v1
+    appVersion: "5.7"
+    created: 2018-09-27T17:55:17.481578+08:00
+    description: Modular and transparent LAMP stack chart supporting PHP-FPM, Release
+      Cloning, LoadBalancer, Ingress, SSL and lots more!
+    digest: 9caf58b7888e6a7b7a36f38dc9d115f24a62182ddc3042dbc93f0691131feadf
+    home: https://github.com/lead4good/helm-lamp-stack
+    maintainers:
+    - name: lead4good
+    name: lamp
+    urls:
+    - https://github.com/mengweestaffondemand/charts/lamp-0.1.5.tgz
+    version: 0.1.5
+generated: 2018-09-27T17:55:17.479071+08:00
