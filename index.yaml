@@ -12271,7 +12271,7 @@ entries:
     digest: 33cf09b2d7df6179545270b88674d9539d7f1845c14f2ef9662d9b0b4e79022b
     engine: gotpl
     home: https://express-gateway.io
-    icon: https://cdn.rawgit.com/ExpressGateway/express-gateway/1757a863/logo/mark-only/ExpressGateway_logomark.png
+    icon: https://cdn.jsdelivr.net/gh/ExpressGateway/express-gateway@1757a863/logo/mark-only/ExpressGateway_logomark.png
     maintainers:
     - email: vincenz.chianese@icloud.com
       name: XVincentX
@@ -12289,7 +12289,7 @@ entries:
     digest: ff3f3694db1815ddd64d2abc16e123ca1e5b380ec30a3c35d4a22f72d808ba23
     engine: gotpl
     home: https://express-gateway.io
-    icon: https://cdn.rawgit.com/ExpressGateway/express-gateway/1757a863/logo/mark-only/ExpressGateway_logomark.png
+    icon: https://cdn.jsdelivr.net/gh/ExpressGateway/express-gateway@1757a863/logo/mark-only/ExpressGateway_logomark.png
     maintainers:
     - email: vincenz.chianese@icloud.com
       name: XVincentX
@@ -12307,7 +12307,7 @@ entries:
     digest: 17e8d143e00c01da705e59a644b77bdda62e3f179ac25c05d2f93371294fd61d
     engine: gotpl
     home: https://express-gateway.io
-    icon: https://cdn.rawgit.com/ExpressGateway/express-gateway/1757a863/logo/mark-only/ExpressGateway_logomark.png
+    icon: https://cdn.jsdelivr.net/gh/ExpressGateway/express-gateway@1757a863/logo/mark-only/ExpressGateway_logomark.png
     maintainers:
     - email: vincenz.chianese@icloud.com
       name: XVincentX
